@@ -54,8 +54,9 @@ def handle_message(event):
 
         line_bot_api.reply_message(
             event.reply_token, sticker_message)
+        return
 
-        if "給我貼圖2" in msg:
+    elif "給我貼圖2" in msg:
         sticker_message = StickerSendMessage(
             package_id='446',
             sticker_id='1988'
